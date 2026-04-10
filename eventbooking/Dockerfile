@@ -2,7 +2,7 @@
 FROM maven:3.8.5-openjdk-17 AS build
 WORKDIR /app
 
-# COPY the contents of your subfolder into the build container
+# Change this line to copy from your subfolder
 COPY eventbooking/ .
 
 RUN mvn clean package -DskipTests
