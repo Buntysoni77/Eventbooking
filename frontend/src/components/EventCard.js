@@ -6,7 +6,7 @@ function EventCard({ event }) {
   const bookEvent = async () => {
     const token = localStorage.getItem("token");
     if (!token) {
-      alert("Please login first! 🔒");
+      alert("Please login first! ");
       return;
     }
 
@@ -18,7 +18,7 @@ function EventCard({ event }) {
           tickets: 1
         }
       );
-      alert(`Booking Successful for ${event.name} ✅`);
+      alert(`Booking Successful for ${event.name} `);
     } catch (error) {
       console.error("Booking error", error);
       alert("Booking failed. Please try again.");
