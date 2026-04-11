@@ -57,7 +57,7 @@ Our system uses a "Two-Step" process to ensure the best results:
 ![Interface](https://github.com/user-attachments/assets/6d8fdd2b-e2f9-4f66-939a-f224a574fe6a)
 
 #### Database & Backend Logs
-![Logs](https://github.com/user-attachments/assets/dde5e7a-6172-4d67-ac4f-73c462cc2149)
+![Logs](https://github.com/user-attachments/assets/dde5e7a3-6172-4d67-ac4f-73c462cc2149)
 
 ---
 
