@@ -8,9 +8,9 @@ public class EventbookingApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(EventbookingApplication.class, args);
-        System.out.println("----------------------------------------------");
-        System.out.println("🚀 Event Booking AI (LLM & RAG) System Ready!");
-        System.out.println("----------------------------------------------");
+        System.out.println("---");
+        System.out.println("EventBooking AI (LLM & RAG) System Ready!");
+        System.out.println("---");
     }
 
 }
