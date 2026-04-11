@@ -48,19 +48,22 @@ Our system uses a "Two-Step" process to ensure the best results:
 > **Why this matters:** By using an LLM + RAG, the assistant stays 100% truthful (no lying) while sounding like a real human expert.
 ---
 
-Project Structure
+### 📸 Project Preview
 
-```text
-├── backend-spring/      # Java Spring Boot API for user & booking management
-├── frontend-react/      # Main user dashboard
-├── ai-engine/           # Python RAG implementation (LangChain + FAISS)
-└── data/                # Sample event documents and brochures
-
-### Dashboard Overview
+#### Dashboard Overview
 ![Dashboard](https://github.com/user-attachments/assets/a4cf3f71-02a3-467c-a3b7-4c97bef47858)
 
-### AI Query Interface
+#### AI Query Interface
 ![Interface](https://github.com/user-attachments/assets/6d8fdd2b-e2f9-4f66-939a-f224a574fe6a)
 
-### Database & Backend Logs
+#### Database & Backend Logs
 ![Logs](https://github.com/user-attachments/assets/dde5e7a-6172-4d67-ac4f-73c462cc2149)
+
+---
+
+## 📂 Project Structure
+```text
+├── backend-spring/      # Java Spring Boot API
+├── frontend-react/      # Main user dashboard
+├── ai-engine/           # Python RAG implementation
+└── data/                # Sample documents
