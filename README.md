@@ -57,10 +57,10 @@ Project Structure
 └── data/                # Sample event documents and brochures
 
 ### Dashboard Overview
-<img src="https://github.com/user-attachments/assets/a4cf3f71-02a3-467c-a3b7-4c97bef47858" width="800" />
+![Dashboard](https://github.com/user-attachments/assets/a4cf3f71-02a3-467c-a3b7-4c97bef47858)
 
 ### AI Query Interface
-<img src="https://github.com/user-attachments/assets/6d8fdd2b-e2f9-4f66-939a-f224a574fe6a" width="800" />
+![Interface](https://github.com/user-attachments/assets/6d8fdd2b-e2f9-4f66-939a-f224a574fe6a)
 
 ### Database & Backend Logs
-<img src="https://github.com/user-attachments/assets/dde5e7a-6172-4d67-ac4f-73c462cc2149" width="800" />
+![Logs](https://github.com/user-attachments/assets/dde5e7a-6172-4d67-ac4f-73c462cc2149)
