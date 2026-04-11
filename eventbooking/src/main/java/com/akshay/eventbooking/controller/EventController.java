@@ -15,21 +15,21 @@ public class EventController {
     @Autowired
     private EventRepository eventRepository;
 
-    // ✅ GET ALL EVENTS
+    // gets all events
     // This is used for the initial home page load
     @GetMapping
     public List<Event> getAllEvents() {
         return eventRepository.findAll();
     }
 
-    // ✅ GET EVENT BY ID
+    // gets event by id
     // Used when a user clicks on a specific event to see details
     @GetMapping("/{id}")
     public Event getEventById(@PathVariable Long id) {
         return eventRepository.findById(id).orElse(null);
     }
 
-    // ✅ CREATE EVENT (Admin Only logic can be added later)
+    // create event
     @PostMapping
     public Event createEvent(@RequestBody Event event) {
         return eventRepository.save(event);
