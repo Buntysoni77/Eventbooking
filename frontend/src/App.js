@@ -16,7 +16,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* 🔥 PROTECTED PAYMENT */}
+        {/* PROTECTED PAYMENT */}
         <Route
           path="/payment/:id"
           element={
@@ -26,7 +26,7 @@ function App() {
           }
         />
 
-        {/* 🔥 USER BOOKINGS */}
+        {/* USER BOOKINGS */}
         <Route
           path="/my-bookings"
           element={
@@ -36,7 +36,7 @@ function App() {
           }
         />
 
-        {/* 🔥 ADMIN */}
+        {/* ADMIN */}
         <Route
           path="/admin"
           element={
