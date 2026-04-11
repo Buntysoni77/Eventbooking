@@ -18,7 +18,7 @@ public class AiController {
     @Autowired
     private EventRepository eventRepository;
 
-    // ✅ SEARCH WITH DUPLICATE FILTERING
+    //searching
     @GetMapping("/search")
     public List<Event> smartSearch(@RequestParam String query) {
         if (query == null || query.trim().isEmpty()) {
@@ -34,17 +34,17 @@ public class AiController {
             results = eventRepository.findByKeyword(keyword);
         }
 
-        // ✅ This LinkedHashSet removes any duplicates and preserves order
+        // LinkedHashSet removes duplicates
         return new ArrayList<>(new LinkedHashSet<>(results));
     }
 
-    // ✅ AI CHAT RESPONSE (RAG)
+    //AI CHAT(using RAG)
     @GetMapping("/chat")
     public String chat(@RequestParam String query) {
         return aiService.getSmartResponse(query);
     }
 
-    // ✅ AUTOCOMPLETE SUGGESTIONS
+    // AUTOCOMPLETE SUGGESTIONS
     @GetMapping("/suggestions")
     public String getSuggestions(@RequestParam String query) {
         return aiService.getQuerySuggestions(query);
