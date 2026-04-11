@@ -23,7 +23,7 @@ public class BookingController {
     @Autowired
     private BookingRepository bookingRepository;
 
-    // ✅ BOOK EVENT
+    //Booking Event
     @PostMapping("/book")
     public String bookEvent(
             @RequestHeader(value = "Authorization", required = false) String token,
@@ -44,7 +44,7 @@ public class BookingController {
         }
     }
 
-    // ✅ USER BOOKINGS
+    // user booking
     @GetMapping("/my")
     public List<Booking> getMyBookings(@RequestHeader("Authorization") String token) {
         // Strip prefix safely
@@ -56,7 +56,7 @@ public class BookingController {
         return bookingService.getBookingsByUser(email);
     }
 
-    // ✅ ADMIN ALL BOOKINGS
+    // admin all books
     @GetMapping("/all")
     public List<Booking> getAllBookings() {
         return bookingRepository.findAll();
