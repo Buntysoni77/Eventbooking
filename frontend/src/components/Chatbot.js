@@ -7,24 +7,24 @@ function Chatbot() {
   const [input, setInput] = useState("");
   const chatEndRef = useRef(null);
 
-  // ✅ LOAD CHAT HISTORY
+  //load chat his..
   useEffect(() => {
     const saved = localStorage.getItem("chatHistory");
     if (saved) setMessages(JSON.parse(saved));
   }, []);
 
-  // ✅ SAVE CHAT HISTORY
+  //save chat his..
   useEffect(() => {
     localStorage.setItem("chatHistory", JSON.stringify(messages));
     scrollToBottom();
   }, [messages]);
 
-  // ✅ AUTO-SCROLL LOGIC
+  //auto-scrol
   const scrollToBottom = () => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // ✅ SEND MESSAGE
+  //send msg
   const sendMessage = async (text = input) => {
     if (!text.trim()) return;
 
@@ -33,7 +33,7 @@ function Chatbot() {
     setInput("");
 
     try {
-      // Calling your Backend (Groq Llama 3.1 + RAG)
+      // Calling Backend (Groq Llama 3.1 + RAG)
       const res = await API.get(`/ai/chat?query=${encodeURIComponent(text)}`);
 
       setMessages((prev) => [
@@ -41,15 +41,15 @@ function Chatbot() {
         { text: res.data, sender: "ai" }
       ]);
     } catch (err) {
-      console.log("❌ Chatbot error:", err);
+      console.log("Chatbot error:", err);
       setMessages((prev) => [
         ...prev,
-        { text: "⚠️ AI is temporarily unavailable.", sender: "ai" }
+        { text: " AI is temporarily unavailable.", sender: "ai" }
       ]);
     }
   };
 
-  // ✅ VOICE INPUT
+  //voice input
   const startVoice = () => {
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
     recognition.lang = "en-IN";
